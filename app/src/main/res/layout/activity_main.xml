@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212">
+
+    <!-- Number Display -->
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|end"
+        android:paddingEnd="24dp"
+        android:textSize="36sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="monospace"
+        android:hint="Enter number"
+        android:textColorHint="#555555"/>
+
+    <!-- Dialpad Grid -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:padding="16dp">
+
+        <Button android:id="@+id/btn1" android:text="1" style="@style/DialButton"/>
+        <Button android:id="@+id/btn2" android:text="2\nABC" style="@style/DialButton"/>
+        <Button android:id="@+id/btn3" android:text="3\nDEF" style="@style/DialButton"/>
+        <Button android:id="@+id/btn4" android:text="4\nGHI" style="@style/DialButton"/>
+        <Button android:id="@+id/btn5" android:text="5\nJKL" style="@style/DialButton"/>
+        <Button android:id="@+id/btn6" android:text="6\nMNO" style="@style/DialButton"/>
+        <Button android:id="@+id/btn7" android:text="7\nPQRS" style="@style/DialButton"/>
+        <Button android:id="@+id/btn8" android:text="8\nTUV" style="@style/DialButton"/>
+        <Button android:id="@+id/btn9" android:text="9\nWXYZ" style="@style/DialButton"/>
+        <Button android:id="@+id/btnStar" android:text="*" style="@style/DialButton"/>
+        <Button android:id="@+id/btn0" android:text="0\n+" style="@style/DialButton"/>
+        <Button android:id="@+id/btnHash" android:text="#" style="@style/DialButton"/>
+
+    </GridLayout>
+
+    <!-- Bottom Row: Contacts | Call | Backspace -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="24dp"
+        android:paddingHorizontal="32dp">
+
+        <ImageButton
+            android:id="@+id/btnContacts"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:background="#2A2A2A"
+            android:padding="12dp"/>
+
+        <Button
+            android:id="@+id/btnCall"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginHorizontal="32dp"
+            android:text="📞"
+            android:textSize="28sp"
+            android:background="#1DB954"
+            android:backgroundTint="#1DB954"/>
+
+        <ImageButton
+            android:id="@+id/btnCallLog"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@android:drawable/ic_menu_recent_history"
+            android:background="#2A2A2A"
+            android:padding="12dp"/>
+
+        <Button
+            android:id="@+id/btnBackspace"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="⌫"
+            android:textSize="20sp"
+            android:background="#2A2A2A"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="16dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
